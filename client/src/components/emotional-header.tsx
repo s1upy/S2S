@@ -1,6 +1,6 @@
 import mentorImage from "@assets/Mask group (1)_1755025858652.png";
 import gameElementsImage from "@assets/Frame 479_1755025307481.png";
-import megaphoneImage from "@assets/Group 228 (1)_1755025300515.png";
+import megaphoneImage from "@assets/Group 229_1755028130652.png";
 import teamImage from "@assets/Frame 501_1755025340599.png";
 
 export default function EmotionalHeader() {
