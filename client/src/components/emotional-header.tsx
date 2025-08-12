@@ -66,9 +66,7 @@ export default function EmotionalHeader() {
               <h3 className="font-semibold font-display mb-4 text-[26px]">Закрытое комьюнити</h3>
               <p className="font-semibold mb-4">Ты попадаешь в тусовку сильных и целеустремлённых.
 </p>
-              <p className="text-sm font-regular">Здесь поддерживают, прокачивают и делятся возможностями.
-              Через год — это уже не просто клуб выпускников,, а твоя сеть полезных связей.
-</p>
+              <p className="text-sm font-regular">Здесь поддерживают, прокачивают и делятся возможностями. Через год — это уже не просто клуб выпускников, а твоя сеть полезных связей.</p>
             </div>
             <div className="mt-4">
               <img
