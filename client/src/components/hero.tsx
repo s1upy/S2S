@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Content */}
             <div className="max-w-xl">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight font-display">
                 Здесь учатся<br />
                 <span className="text-primary">выигрывать</span>
               </h1>

@@ -33,7 +33,7 @@ export default function Features() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4 font-display">
               Как проходят занятия?
             </h2>
             <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
@@ -82,7 +82,7 @@ export default function Features() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Left side - Content */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight font-display">
                   Эмоциональный заголовок
                 </h2>
                 
@@ -145,7 +145,7 @@ export default function Features() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4 font-display">
               Выбирайте подходящий для себя формат
             </h2>
             <p className="text-lg text-gray-600 text-center mb-16">
