@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ApplicationModal from "@/components/application-modal";
+import heroImage from "@assets/Group 140_1755012473337.png";
 
 export default function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,15 +51,11 @@ export default function Hero() {
             {/* Right side - Illustration */}
             <div className="relative">
               <div className="relative z-10">
-                {/* Main illustration placeholder - будет заменена на реальную иллюстрацию */}
-                <div className="w-full h-96 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-32 h-32 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-4xl">🎓</span>
-                    </div>
-                    <p className="text-xl font-semibold">Образовательная платформа</p>
-                  </div>
-                </div>
+                <img 
+                  src={heroImage} 
+                  alt="Студент с ноутбуком и кубком - образовательная платформа S2S" 
+                  className="w-full h-auto max-w-lg mx-auto"
+                />
               </div>
               
               {/* Background decorative elements */}
