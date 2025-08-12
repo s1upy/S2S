@@ -20,11 +20,7 @@ export default function EmotionalHeader() {
           >
             <div className="flex-1 z-10">
               <h2 className="text-2xl text-[#212225] font-semibold font-display mb-4 text-[36px]">Наставники, которые недавно были на твоём месте</h2>
-              <p className="text-[#212225] font-regular">
-                Преподаватели, которые буквально на прошлой неделе сами сдавали
-                экзамен на олимпиаде. Они еще помнят как дрожали руки на
-                экзамене.
-              </p>
+              <p className="text-[#212225] font-regular">У нас преподы — студенты топовых вузов, не «дядьки из прошлого». Они знают, как сдать сейчас, объясняют простым языком и реально понимают, через что ты проходишь.</p>
             </div>
             <div className="flex-1">
               <img
