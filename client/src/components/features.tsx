@@ -14,7 +14,7 @@ export default function Features() {
       <section className="bg-white mt-14 max-w-7xl mx-auto">
         {/* Заголовок */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-          <h1 className="text-2xl font-display md:text-3xl font-bold leading-snug">
+          <h1 className="font-display md:text-3xl font-bold text-[36px]">
             Для тех, кто требует большего <br /> от учёбы, от себя, от мира
           </h1>
           <p className="text-[#212225] font-regular text-sm mt-2 md:mt-0 max-w-xl">
