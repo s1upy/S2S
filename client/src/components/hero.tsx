@@ -19,7 +19,7 @@ export default function Hero() {
         <div className="container mx-auto rounded-3xl border-solid border-2 border-b-4 border-[#0080FF]">
           <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* Left side - Content */}
-            <div className="max-w-xl px-6 py-6">
+            <div className="max-w-xl px-8">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight font-display">
                 Здесь учатся
                 <br />
@@ -33,7 +33,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   onClick={() => setIsModalOpen(true)}
-                  variant="default"
+                  className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition-all duration-300"
                   size="lg"
                 >
                   Оставить заявку
@@ -41,6 +41,7 @@ export default function Hero() {
                 <Button
                   variant="outline"
                   onClick={scrollToCourses}
+                  className="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300"
                   size="lg"
                 >
                   Выбрать курс
