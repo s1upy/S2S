@@ -23,7 +23,7 @@ export default function Hero() {
                 Здесь учатся<br />
                 <span className="text-primary">выигрывать</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-700 mb-8 leading-relaxed font-semibold">
                 Школа, где не просто готовятся к ЕГЭ, а играют в долгую. 
                 Готовим к экзаменам, олимпиадам и поступлению в топовые вузы.
               </p>
@@ -68,7 +68,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
       <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
