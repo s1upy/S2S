@@ -28,7 +28,7 @@ export default function EmotionalHeader() {
               <img 
                 src={mentorImage} 
                 alt="Студент-наставник с книгами"
-                className="w-full h-auto max-w-md mx-auto"
+                className="w-full h-auto mx-auto scale-125"
               />
             </div>
           </div>
