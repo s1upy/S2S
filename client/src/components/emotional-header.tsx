@@ -14,19 +14,22 @@ export default function EmotionalHeader() {
 
         {/* Первый блок - Наставники */}
         <div className="mb-8">
-          <div
-            className="bg-gray-50
-            max-h-[502px] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden"
-          >
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
             <div className="flex-1 z-10">
-              <h2 className="text-2xl text-[#212225] font-semibold font-display mb-4 text-[36px]">Наставники, которые недавно были на твоём месте</h2>
-              <p className="text-[#212225] font-regular">У нас преподы — студенты топовых вузов, не «дядьки из прошлого». Они знают, как сдать сейчас, объясняют простым языком и реально понимают, через что ты проходишь.</p>
+              <h2 className="text-2xl font-semibold font-display mb-4 text-[36px]">
+                Наставники, которые недавно были на твоём месте
+              </h2>
+              <p className="font-regular">
+                У нас преподы — студенты топовых вузов, не «дядьки из прошлого».
+                Они знают, как сдать сейчас, объясняют простым языком и реально
+                понимают, через что ты проходишь.
+              </p>
             </div>
             <div className="flex-1">
               <img
                 src={mentorImage}
                 alt="Студент-наставник с книгами"
-                className="w-full h-auto mx-auto scale-[250%] ml-20"
+                className="w-full h-auto mx-auto scale-[240%] ml-[35%]"
               />
             </div>
           </div>
@@ -35,40 +38,45 @@ export default function EmotionalHeader() {
         {/* Второй ряд - Учёба с элементами игры и Закрытые сообщества */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Учёба с элементами игры */}
-          <div className="bg-gray-50 rounded-[30px] p-8 relative overflow-hidden">
-            <h3 className="text-xl font-bold mb-4">Учёба с элементами игры</h3>
-            <p className="text-gray-600 mb-4">
-              Челленджи, рейтинги, уровни, звания, награды — скучно не будет
-            </p>
-            <p className="text-sm text-gray-500">
-              Мы геймифицировали образование полностью, чтобы ты не боялся
-              сложности, а каждый день бежал к компьютеру изучать новое.
-            </p>
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
+            <div className="p-8">
+              <h3 className="text-xl font-semibold font-display mb-4 text-[36px]">
+                Учёба с элементами игры
+              </h3>
+              <p className="font-semibold mb-4">
+                Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
+              </p>
+              <p className="text-sm font-regular">
+                Мы встроили геймификацию в учебный процесс, чтобы ты оставался в
+                тонусе и видел свой рост каждую неделю.
+              </p>
+            </div>
             <div className="mt-4">
               <img
                 src={gameElementsImage}
                 alt="Игровые элементы с прогрессом"
-                className="w-full h-auto max-w-xs"
+                className="w-full h-auto"
               />
             </div>
           </div>
 
           {/* Закрытые сообщества */}
-          <div className="bg-gray-50 rounded-[30px] p-8 relative overflow-hidden">
-            <h3 className="text-xl font-bold mb-4">Закрытое комьюнити</h3>
-            <p className="text-gray-600 mb-4">
-              Ты попадаешь в тусовку сильных и целеустремлённых
-            </p>
-            <p className="text-sm text-gray-500 mb-4">
-              Твоим одноклассникам — тико попадают и двигают вместе с тобой.
-              Никаких троечников. Только мотивированные ребята, которые хотят
-              достигать.
-            </p>
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
+            <div className="p-8">
+              <h3 className="text-xl font-semibold font-display mb-4 text-[36px]">Закрытое комьюнити</h3>
+              <p className="font-semibold mb-4">
+                Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
+              </p>
+              <p className="text-sm font-regular">
+                Мы встроили геймификацию в учебный процесс, чтобы ты оставался в
+                тонусе и видел свой рост каждую неделю.
+              </p>
+            </div>
             <div className="mt-4">
               <img
                 src={teamImage}
-                alt="Команда мотивированных студентов"
-                className="w-full h-auto max-w-xs"
+                alt="Игровые элементы с прогрессом"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -84,7 +92,7 @@ export default function EmotionalHeader() {
             />
           </div>
           <div className="flex-1 z-10">
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-2xl font-semibold font-display mb-4">
               Навыки, которые пригодятся в жизни
             </h3>
             <p className="text-gray-600 mb-4">
