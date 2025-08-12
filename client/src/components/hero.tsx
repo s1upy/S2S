@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <>
       <section className="relative mt-10 bg-tranperent overflow-hidden">
-        <div className="container mx-auto rounded-3xl border-solid border-2 border-b-4 border-[#0080FF]">
+        <div className="container bg-[#FCFCFF] mx-auto rounded-3xl border-solid border-2 border-b-4 border-[#0080FF]">
           <div className="grid lg:grid-cols-2 gap-0 items-center">
             {/* Left side - Content */}
             <div className="max-w-xl h-full px-8 py-8 flex justify-between flex-col">
