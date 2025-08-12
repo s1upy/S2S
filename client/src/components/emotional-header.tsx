@@ -5,7 +5,7 @@ import teamImage from "@assets/Frame 501_1755025340599.png";
 
 export default function EmotionalHeader() {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white mt-36">
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-display">
@@ -14,21 +14,23 @@ export default function EmotionalHeader() {
 
         {/* Первый блок - Наставники */}
         <div className="mb-8">
-          <div className="bg-gray-50 rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
+          <div
+            className="bg-gray-50
+            max-h-[502px] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden"
+          >
             <div className="flex-1 z-10">
-              <h3 className="text-2xl font-bold mb-4">
-                Наставники, которые недавно были на вашём месте
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Преподаватели, которые буквально на прошлой неделе сами сдавали экзамен на олимпиаде. 
-                Они еще помнят как дрожали руки на экзамене.
+              <h2 className="text-2xl text-[#212225] font-semibold font-display mb-4 text-[36px]">Наставники, которые недавно были на твоём месте</h2>
+              <p className="text-[#212225] font-regular">
+                Преподаватели, которые буквально на прошлой неделе сами сдавали
+                экзамен на олимпиаде. Они еще помнят как дрожали руки на
+                экзамене.
               </p>
             </div>
             <div className="flex-1">
-              <img 
-                src={mentorImage} 
+              <img
+                src={mentorImage}
                 alt="Студент-наставник с книгами"
-                className="w-full h-auto mx-auto scale-125"
+                className="w-full h-auto mx-auto scale-[250%] ml-20"
               />
             </div>
           </div>
@@ -38,18 +40,17 @@ export default function EmotionalHeader() {
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Учёба с элементами игры */}
           <div className="bg-gray-50 rounded-[30px] p-8 relative overflow-hidden">
-            <h3 className="text-xl font-bold mb-4">
-              Учёба с элементами игры
-            </h3>
+            <h3 className="text-xl font-bold mb-4">Учёба с элементами игры</h3>
             <p className="text-gray-600 mb-4">
               Челленджи, рейтинги, уровни, звания, награды — скучно не будет
             </p>
             <p className="text-sm text-gray-500">
-              Мы геймифицировали образование полностью, чтобы ты не боялся сложности, а каждый день бежал к компьютеру изучать новое.
+              Мы геймифицировали образование полностью, чтобы ты не боялся
+              сложности, а каждый день бежал к компьютеру изучать новое.
             </p>
             <div className="mt-4">
-              <img 
-                src={gameElementsImage} 
+              <img
+                src={gameElementsImage}
                 alt="Игровые элементы с прогрессом"
                 className="w-full h-auto max-w-xs"
               />
@@ -58,19 +59,18 @@ export default function EmotionalHeader() {
 
           {/* Закрытые сообщества */}
           <div className="bg-gray-50 rounded-[30px] p-8 relative overflow-hidden">
-            <h3 className="text-xl font-bold mb-4">
-              Закрытое комьюнити
-            </h3>
+            <h3 className="text-xl font-bold mb-4">Закрытое комьюнити</h3>
             <p className="text-gray-600 mb-4">
               Ты попадаешь в тусовку сильных и целеустремлённых
             </p>
             <p className="text-sm text-gray-500 mb-4">
-              Твоим одноклассникам — тико попадают и двигают вместе с тобой. 
-              Никаких троечников. Только мотивированные ребята, которые хотят достигать.
+              Твоим одноклассникам — тико попадают и двигают вместе с тобой.
+              Никаких троечников. Только мотивированные ребята, которые хотят
+              достигать.
             </p>
             <div className="mt-4">
-              <img 
-                src={teamImage} 
+              <img
+                src={teamImage}
                 alt="Команда мотивированных студентов"
                 className="w-full h-auto max-w-xs"
               />
@@ -81,8 +81,8 @@ export default function EmotionalHeader() {
         {/* Третий блок - Навыки для жизни */}
         <div className="bg-gray-50 rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
           <div className="flex-1">
-            <img 
-              src={megaphoneImage} 
+            <img
+              src={megaphoneImage}
               alt="Мегафон с задачами"
               className="w-full h-auto max-w-md mx-auto"
             />
