@@ -26,45 +26,23 @@ export default function Teachers() {
               Наши преподаватели
             </h2>
             <p className="text-lg text-gray-600">
-              Молодые преподаватели из топовых вузов, которые понимают современных студентов
+              Ответы на самые популярные вопросы о нашей школе и подготовке к ЕГЭ
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {teachers.map((teacher) => (
-              <Card
-                key={teacher.id}
-                className="shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <CardContent className="p-6 text-center">
-                  <img
-                    src={teacher.imageUrl || "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300"}
-                    alt={`${teacher.name} - преподаватель ${teacher.subject}`}
-                    className="w-20 h-20 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="font-semibold text-gray-900 text-center mb-1">
-                    {teacher.name}
-                  </h3>
-                  <p className="text-primary text-center mb-2">
-                    {teacher.subject}
-                  </p>
-                  <p className="text-sm text-gray-600 text-center mb-3">
-                    {teacher.university}
-                  </p>
-                  
-                  <div className="text-xs text-gray-500 space-y-1 mb-4">
-                    {teacher.achievements.map((achievement, index) => (
-                      <p key={index}>{achievement}</p>
-                    ))}
-                  </div>
-
-                  {teacher.quote && (
-                    <blockquote className="text-xs italic text-gray-600 border-l-2 border-primary pl-3">
-                      "{teacher.quote}"
-                    </blockquote>
-                  )}
-                </CardContent>
-              </Card>
+              <div key={teacher.id} className="text-center">
+                <h3 className="font-bold text-gray-900 mb-1">
+                  {teacher.name}
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  {teacher.subject}
+                </p>
+                <p className="text-sm text-gray-600">
+                  {teacher.university}
+                </p>
+              </div>
             ))}
           </div>
 

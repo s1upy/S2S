@@ -72,8 +72,9 @@ export default function CoursesCatalog() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Выберите предметы для подготовки
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Комплексная подготовка к ЕГЭ и ОГЭ по всем предметам с индивидуальным подходом и гарантией результата
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Комплексная подготовка к ЕГЭ и ОГЭ по всем предметам с индивидуальным<br />
+                подходом и гарантией результата
               </p>
             </div>
 

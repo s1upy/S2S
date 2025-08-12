@@ -9,13 +9,13 @@ export default function Features() {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                   Для тех, кто требует большего<br />
-                  <span className="text-primary">от учёбы, от себя, от мира</span>
+                  <span className="text-gray-600 font-normal">от учёбы, от себя, от мира</span>
                 </h2>
               </div>
               <div>
-                <p className="text-xl text-gray-700 mb-4">Это не просто курсы.</p>
+                <p className="text-xl text-gray-700 font-semibold mb-4">Это не просто курсы.</p>
                 <p className="text-lg text-gray-600">
                   Это путь, где ты растёшь и выходишь на новый уровень
                 </p>
@@ -25,30 +25,21 @@ export default function Features() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Features List */}
       <section className="py-20 bg-neutral">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-8">
               {/* Feature 1 */}
-              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <MessageSquare className="text-primary text-xl" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Прокачиваем soft skills
+              <div className="text-left">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Прокачиваем soft skills: как выступать, как мыслить, как общаться
                 </h3>
-                <p className="text-gray-600">
-                  Как выступать, как мыслить, как общаться
-                </p>
               </div>
 
               {/* Feature 2 */}
-              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="text-success text-xl" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-right">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Готовим к ЕГЭ на 80+ баллов
                 </h3>
                 <p className="text-gray-600">
@@ -57,18 +48,33 @@ export default function Features() {
               </div>
 
               {/* Feature 3 */}
-              <div className="bg-white rounded-xl p-8 shadow-card hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-2">
-                <div className="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center mb-6">
-                  <Trophy className="text-warning text-xl" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+              <div className="text-left">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   Помогаем выигрывать олимпиады
                 </h3>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="text-left">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  Настраиваем на поступление в топ:
+                </h3>
                 <p className="text-gray-600">
-                  Настраиваем на поступление в топ: МГУ, ВШЭ, МФТИ, СПбГУ — ты выбираешь
+                  МГУ, ВШЭ, МФТИ, СПбГУ — ты выбираешь
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Emotional Headline */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center mb-16">
+            <h2 className="text-2xl text-gray-500 mb-8">
+              Эмоциональный заголовок
+            </h2>
           </div>
         </div>
       </section>
@@ -77,41 +83,54 @@ export default function Features() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Наставники, которые недавно были на твоём месте
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  Наставники, которые<br />
+                  недавно были на твоём<br />
+                  месте
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600">
                   У нас преподы — студенты топовых вузов, не «дядьки из прошлого». 
                   Они знают, как сдать сейчас, объясняют простым языком и реально понимают, 
                   через что ты проходишь.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-primary/5 rounded-xl p-6">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mb-3">
-                    <Gamepad2 className="text-primary text-sm" />
+
+              {/* Three column layout */}
+              <div className="space-y-8">
+                {/* Row 1: Gamification and Community */}
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-3">Учёба с элементами игры</h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Мы встроили геймификацию в учебный процесс, чтобы ты 
+                      оставался в тонусе и видел свой рост каждую неделю.
+                    </p>
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Учёба с элементами игры</h3>
-                  <p className="text-sm text-gray-600">
-                    Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
-                  </p>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-3">Закрытое коммьюнити</h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Ты попадаешь в тусовку сильных и целеустремлённых.
+                    </p>
+                    <p className="text-sm text-gray-600 mb-2">
+                      Здесь поддерживают, прокачивают и делятся возможностями.
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Через год — это уже не просто клуб выпускников, а твоя сеть полезных связей.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-success/5 rounded-xl p-6">
-                  <div className="w-8 h-8 bg-success/20 rounded-lg flex items-center justify-center mb-3">
-                    <Users className="text-success text-sm" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Закрытое коммьюнити</h3>
-                  <p className="text-sm text-gray-600">
-                    Ты попадаешь в тусовку сильных и целеустремлённых.
+
+                {/* Row 2: Life Skills */}
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-3">Навыки, которые пригодятся в жизни</h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Здесь не только тесты и задачи. Ты научишься:
                   </p>
-                </div>
-                <div className="bg-warning/5 rounded-xl p-6 col-span-2">
-                  <div className="w-8 h-8 bg-warning/20 rounded-lg flex items-center justify-center mb-3">
-                    <Lightbulb className="text-warning text-sm" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Навыки, которые пригодятся в жизни</h3>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Говорить так, чтобы тебя слушали</li>
                     <li>• Презентовать свои идеи</li>
@@ -126,7 +145,7 @@ export default function Features() {
       </section>
 
       {/* Target Audience */}
-      <section className="py-20 bg-neutral">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
@@ -135,10 +154,7 @@ export default function Features() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Card 1 */}
-              <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Trophy className="text-primary text-xl" />
-                </div>
+              <div className="text-center">
                 <h3 className="font-semibold text-gray-900 mb-3">Ты хочешь</h3>
                 <p className="text-gray-600 text-sm">
                   Не просто сдавать, а выигрывать
@@ -146,10 +162,7 @@ export default function Features() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300">
-                <div className="w-12 h-12 bg-success/10 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="text-success text-xl" />
-                </div>
+              <div className="text-center">
                 <h3 className="font-semibold text-gray-900 mb-3">Ты стремишься</h3>
                 <p className="text-gray-600 text-sm">
                   В топ и готов работать на результат
@@ -157,10 +170,7 @@ export default function Features() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300">
-                <div className="w-12 h-12 bg-warning/10 rounded-lg flex items-center justify-center mb-4">
-                  <MessageSquare className="text-warning text-xl" />
-                </div>
+              <div className="text-center">
                 <h3 className="font-semibold text-gray-900 mb-3">Тебе важно</h3>
                 <p className="text-gray-600 text-sm">
                   Куда идти дальше: вузы, профессии, проекты
@@ -168,10 +178,7 @@ export default function Features() {
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="text-purple-600 text-xl" />
-                </div>
+              <div className="text-center">
                 <h3 className="font-semibold text-gray-900 mb-3">Ты ищешь</h3>
                 <p className="text-gray-600 text-sm">
                   Сильное окружение — своих по духу
