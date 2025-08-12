@@ -64,9 +64,8 @@ export default function EmotionalHeader() {
           <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
             <div className="p-8">
               <h3 className="font-semibold font-display mb-4 text-[26px]">Закрытое комьюнити</h3>
-              <p className="font-semibold mb-4">
-                Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
-              </p>
+              <p className="font-semibold mb-4">Ты попадаешь в тусовку сильных и целеустремлённых.
+</p>
               <p className="text-sm font-regular">
                 Мы встроили геймификацию в учебный процесс, чтобы ты оставался в
                 тонусе и видел свой рост каждую неделю.
