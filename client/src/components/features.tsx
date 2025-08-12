@@ -45,17 +45,18 @@ export default function Features() {
         </div>
 
         {/* Нижний блок */}
-        <div className="bg-[#0080FF] text-white p-6 flex items-center justify-between rounded-[30px] relative overflow-hidden">
+        <div className="bg-[#0080FF] min-h-[150px] flex text-start text-white p-6 flex items-end justify-between rounded-[30px] relative overflow-hidden">
           <div className="relative z-10">
             <p className="font-medium text-lg">
-              Настраиваем на поступление в топ:<br />
+              Настраиваем на поступление в топ:
+              <br />
               МГУ, ВШЭ, МФТИ, СПбГУ — ты выбираешь
             </p>
           </div>
           <div className="absolute right-0 top-0 h-full">
-            <img 
-              src={universityLogos} 
-              alt="Логотипы университетов" 
+            <img
+              src={universityLogos}
+              alt="Логотипы университетов"
               className="h-full w-auto object-cover object-right"
             />
           </div>
