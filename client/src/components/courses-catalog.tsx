@@ -94,16 +94,19 @@ export default function CoursesCatalog() {
               </div>
 
               {/* Filter Tabs */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-3 mb-8 justify-center">
                 {categories.map((category) => (
-                  <Button
+                  <button
                     key={category.key}
-                    variant={activeCategory === category.key ? "default" : "outline"}
                     onClick={() => setActiveCategory(category.key)}
-                    className="font-medium"
+                    className={`px-6 py-3 rounded-full font-medium transition-all ${
+                      activeCategory === category.key
+                        ? 'bg-primary text-white shadow-lg'
+                        : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
+                    }`}
                   >
-                    {category.name} <span className="ml-1 text-sm">{categoryCounts[category.key] || 0}</span>
-                  </Button>
+                    {category.name}
+                  </button>
                 ))}
               </div>
 

@@ -3,141 +3,199 @@ import { MessageSquare, Target, Trophy, Users, Gamepad2, Lightbulb } from "lucid
 export default function Features() {
   return (
     <>
-      {/* Value Proposition */}
-      <section className="py-20 bg-white" id="about">
+      {/* Statistics Section */}
+      <section className="py-16 bg-white" id="about">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Для тех, кто требует большего<br />
-                  <span className="text-gray-600 font-normal">от учёбы, от себя, от мира</span>
-                </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">2000+</div>
+                <p className="text-gray-600">Учеников поступили в топ вузы</p>
               </div>
-              <div>
-                <p className="text-xl text-gray-700 font-semibold mb-4">Это не просто курсы.</p>
-                <p className="text-lg text-gray-600">
-                  Это путь, где ты растёшь и выходишь на новый уровень
-                </p>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">85+</div>
+                <p className="text-gray-600">Средний балл ЕГЭ наших учеников</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features List */}
-      <section className="py-20 bg-neutral">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {/* Feature 1 */}
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Прокачиваем soft skills: как выступать, как мыслить, как общаться
-                </h3>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">15</div>
+                <p className="text-gray-600">Предметов для подготовки</p>
               </div>
-
-              {/* Feature 2 */}
-              <div className="text-right">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Готовим к ЕГЭ на 80+ баллов
-                </h3>
-                <p className="text-gray-600">
-                  Помогаем понять не только «что сдавать», но и зачем
-                </p>
-              </div>
-
-              {/* Feature 3 */}
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Помогаем выигрывать олимпиады
-                </h3>
-              </div>
-
-              {/* Feature 4 */}
-              <div className="text-left">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Настраиваем на поступление в топ:
-                </h3>
-                <p className="text-gray-600">
-                  МГУ, ВШЭ, МФТИ, СПбГУ — ты выбираешь
-                </p>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-2">5 лет</div>
+                <p className="text-gray-600">Готовим к экзаменам и олимпиадам</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emotional Headline */}
-      <section className="py-20 bg-white">
+      {/* How it works section */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center mb-16">
-            <h2 className="text-2xl text-gray-500 mb-8">
-              Эмоциональный заголовок
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+              Как проходят занятия?
             </h2>
+            <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+              Мы создали уникальную методику, которая сочетает классические подходы с современными технологиями
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Персональный план</h3>
+                <p className="text-gray-600">
+                  Составляем индивидуальную программу на основе ваших целей и текущего уровня знаний
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">👨‍🏫</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Опытные преподаватели</h3>
+                <p className="text-gray-600">
+                  Наши преподаватели - выпускники МГУ, ВШЭ, МФТИ с высокими результатами ЕГЭ
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Контроль прогресса</h3>
+                <p className="text-gray-600">
+                  Регулярные тестирования и анализ результатов для корректировки программы
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Mentors Section */}
+      {/* Advantages section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 items-start mb-16">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left side - Content */}
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                  Наставники, которые<br />
-                  недавно были на твоём<br />
-                  месте
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+                  Эмоциональный заголовок
                 </h2>
-                <p className="text-lg text-gray-600">
-                  У нас преподы — студенты топовых вузов, не «дядьки из прошлого». 
-                  Они знают, как сдать сейчас, объясняют простым языком и реально понимают, 
-                  через что ты проходишь.
-                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-green-600 font-bold text-sm">✓</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Персональный подход</h3>
+                      <p className="text-gray-600">Индивидуальная программа для каждого ученика с учетом его уровня и целей</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-blue-600 font-bold text-sm">✓</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Опытные наставники</h3>
+                      <p className="text-gray-600">Преподаватели с высокими результатами ЕГЭ и опытом подготовки к олимпиадам</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-purple-600 font-bold text-sm">✓</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-2">Современные технологии</h3>
+                      <p className="text-gray-600">Интерактивная платформа с играми, тестами и системой мотивации</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Three column layout */}
-              <div className="space-y-8">
-                {/* Row 1: Gamification and Community */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-3">Учёба с элементами игры</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Челленджи, рейтинги, уровни, аватары, награды — скучно не будет.
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Мы встроили геймификацию в учебный процесс, чтобы ты 
-                      оставался в тонусе и видел свой рост каждую неделю.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-3">Закрытое коммьюнити</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Ты попадаешь в тусовку сильных и целеустремлённых.
-                    </p>
-                    <p className="text-sm text-gray-600 mb-2">
-                      Здесь поддерживают, прокачивают и делятся возможностями.
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Через год — это уже не просто клуб выпускников, а твоя сеть полезных связей.
-                    </p>
+              {/* Right side - Illustration */}
+              <div className="relative">
+                <div className="relative z-10">
+                  <div className="w-full h-80 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center">
+                    <div className="text-white text-center">
+                      <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span className="text-3xl">🚀</span>
+                      </div>
+                      <p className="text-lg font-semibold">Учеба с удовольствием</p>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Background decorative elements */}
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-300 rounded-full blur-sm opacity-70"></div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-pink-300 rounded-full blur-sm opacity-70"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                {/* Row 2: Life Skills */}
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-3">Навыки, которые пригодятся в жизни</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Здесь не только тесты и задачи. Ты научишься:
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Говорить так, чтобы тебя слушали</li>
-                    <li>• Презентовать свои идеи</li>
-                    <li>• Критически мыслить и решать реальные задачи</li>
-                    <li>• Организовывать себя и своё время</li>
-                  </ul>
+      {/* Services section with icons */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+              Выбирайте подходящий для себя формат
+            </h2>
+            <p className="text-lg text-gray-600 text-center mb-16">
+              Разные форматы обучения для достижения ваших целей
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-2xl">🎯</span>
                 </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Индивидуальные занятия</h3>
+                <p className="text-gray-600 mb-6">
+                  Персональная программа с учетом ваших целей и уровня знаний
+                </p>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                  <li>• Гибкое расписание</li>
+                  <li>• Персональный преподаватель</li>
+                  <li>• Индивидуальная программа</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-2xl">👥</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Групповые занятия</h3>
+                <p className="text-gray-600 mb-6">
+                  Обучение в небольших группах до 8 человек с активным взаимодействием
+                </p>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                  <li>• До 8 учеников в группе</li>
+                  <li>• Командная работа</li>
+                  <li>• Доступная цена</li>
+                </ul>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                  <span className="text-2xl">💻</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Онлайн-курсы</h3>
+                <p className="text-gray-600 mb-6">
+                  Интерактивные курсы с видеолекциями, тестами и домашними заданиями
+                </p>
+                <ul className="text-gray-600 space-y-2 text-sm">
+                  <li>• Доступ 24/7</li>
+                  <li>• Интерактивные материалы</li>
+                  <li>• Автоматическая проверка</li>
+                </ul>
               </div>
             </div>
           </div>

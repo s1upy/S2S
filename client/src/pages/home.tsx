@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import Features from "@/components/features";
 import CoursesCatalog from "@/components/courses-catalog";
 import Teachers from "@/components/teachers";
+import Testimonials from "@/components/testimonials";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <CoursesCatalog />
       <Teachers />
+      <Testimonials />
       <ContactForm />
       <Footer />
     </div>

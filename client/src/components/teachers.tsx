@@ -26,22 +26,32 @@ export default function Teachers() {
               Наши преподаватели
             </h2>
             <p className="text-lg text-gray-600">
-              Ответы на самые популярные вопросы о нашей школе и подготовке к ЕГЭ
+              Опытные наставники и выпускники ведущих вузов России
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {teachers.map((teacher) => (
-              <div key={teacher.id} className="text-center">
+              <div key={teacher.id} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white text-2xl font-bold">
+                    {teacher.name.split(' ')[0].charAt(0)}
+                  </span>
+                </div>
                 <h3 className="font-bold text-gray-900 mb-1">
                   {teacher.name}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-primary font-medium mb-2">
                   {teacher.subject}
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 mb-4">
                   {teacher.university}
                 </p>
+                <div className="text-xs text-gray-500 space-y-1">
+                  {teacher.achievements.slice(0, 2).map((achievement, index) => (
+                    <p key={index}>• {achievement}</p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
