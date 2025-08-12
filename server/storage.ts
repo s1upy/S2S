@@ -1,0 +1,303 @@
+import { type User, type InsertUser, type Course, type InsertCourse, type Teacher, type InsertTeacher, type Application, type InsertApplication } from "@shared/schema";
+import { randomUUID } from "crypto";
+
+export interface IStorage {
+  getUser(id: string): Promise<User | undefined>;
+  getUserByUsername(username: string): Promise<User | undefined>;
+  createUser(user: InsertUser): Promise<User>;
+  getCourses(): Promise<Course[]>;
+  getCourse(id: string): Promise<Course | undefined>;
+  getCoursesByCategory(category: string): Promise<Course[]>;
+  getCoursesBySubject(subject: string): Promise<Course[]>;
+  createCourse(course: InsertCourse): Promise<Course>;
+  getTeachers(): Promise<Teacher[]>;
+  getTeacher(id: string): Promise<Teacher | undefined>;
+  createTeacher(teacher: InsertTeacher): Promise<Teacher>;
+  createApplication(application: InsertApplication): Promise<Application>;
+  getApplications(): Promise<Application[]>;
+}
+
+export class MemStorage implements IStorage {
+  private users: Map<string, User>;
+  private courses: Map<string, Course>;
+  private teachers: Map<string, Teacher>;
+  private applications: Map<string, Application>;
+
+  constructor() {
+    this.users = new Map();
+    this.courses = new Map();
+    this.teachers = new Map();
+    this.applications = new Map();
+    
+    this.initializeData();
+  }
+
+  private initializeData() {
+    // Initialize courses
+    const sampleCourses: Course[] = [
+      {
+        id: randomUUID(),
+        title: "Подготовка к перечневым олимпиадам по физике",
+        description: "Углубленная подготовка к профильной математике для технических специальностей",
+        subject: "Физика",
+        category: "Олимпиады",
+        duration: "9 месяцев",
+        lessons: 72,
+        grades: "9–11 класс",
+        features: [
+          "Разбор всех заданий",
+          "Персональная обратная связь",
+          "Домашние задания",
+          "Пробные экзамены",
+          "Индивидуальные консультации"
+        ],
+        originalPrice: 14000,
+        currentPrice: 3499,
+        isPopular: true
+      },
+      {
+        id: randomUUID(),
+        title: "ЕГЭ по физике",
+        description: "Углубленная подготовка к профильной математике для технических специальностей",
+        subject: "Физика",
+        category: "ЕГЭ",
+        duration: "9 месяцев",
+        lessons: 72,
+        grades: "9–11 класс",
+        features: [
+          "Разбор всех заданий",
+          "Персональная обратная связь",
+          "Домашние задания",
+          "Пробные экзамены"
+        ],
+        originalPrice: 14000,
+        currentPrice: 3499,
+        isPopular: false
+      },
+      {
+        id: randomUUID(),
+        title: "ОГЭ по физике",
+        description: "Углубленная подготовка к профильной математике для технических специальностей",
+        subject: "Физика",
+        category: "ОГЭ",
+        duration: "9 месяцев",
+        lessons: 72,
+        grades: "9–11 класс",
+        features: [
+          "Разбор всех заданий",
+          "Персональная обратная связь",
+          "Домашние задания",
+          "Пробные экзамены"
+        ],
+        originalPrice: 14000,
+        currentPrice: 3499,
+        isPopular: false
+      },
+      {
+        id: randomUUID(),
+        title: "ЕГЭ по математике",
+        description: "Подготовка к профильной математике с акцентом на сложные задания",
+        subject: "Математика",
+        category: "ЕГЭ",
+        duration: "10 месяцев",
+        lessons: 80,
+        grades: "10–11 класс",
+        features: [
+          "Разбор всех заданий",
+          "Персональная обратная связь",
+          "Домашние задания",
+          "Пробные экзамены"
+        ],
+        originalPrice: 15000,
+        currentPrice: 4999,
+        isPopular: true
+      },
+      {
+        id: randomUUID(),
+        title: "Основы информатики",
+        description: "Базовый курс по информатике для начинающих",
+        subject: "Информатика",
+        category: "Основы",
+        duration: "6 месяцев",
+        lessons: 48,
+        grades: "8–10 класс",
+        features: [
+          "Основы программирования",
+          "Алгоритмы и структуры данных",
+          "Практические задания"
+        ],
+        originalPrice: 12000,
+        currentPrice: 2999,
+        isPopular: false
+      },
+      {
+        id: randomUUID(),
+        title: "Углубленная астрономия",
+        description: "Продвинутый курс астрономии для олимпиад",
+        subject: "Астрономия",
+        category: "Углубление",
+        duration: "8 месяцев",
+        lessons: 64,
+        grades: "9–11 класс",
+        features: [
+          "Теоретическая астрономия",
+          "Практические наблюдения",
+          "Подготовка к олимпиадам"
+        ],
+        originalPrice: 13000,
+        currentPrice: 3799,
+        isPopular: false
+      },
+      {
+        id: randomUUID(),
+        title: "ОГЭ по математике",
+        description: "Подготовка к ОГЭ по математике с гарантией результата",
+        subject: "Математика",
+        category: "ОГЭ",
+        duration: "8 месяцев",
+        lessons: 64,
+        grades: "8–9 класс",
+        features: [
+          "Разбор всех заданий",
+          "Персональная обратная связь",
+          "Домашние задания"
+        ],
+        originalPrice: 12000,
+        currentPrice: 2999,
+        isPopular: false
+      }
+    ];
+
+    sampleCourses.forEach(course => {
+      this.courses.set(course.id, course);
+    });
+
+    // Initialize teachers
+    const sampleTeachers: Teacher[] = [
+      {
+        id: randomUUID(),
+        name: "Лёша Иванов",
+        subject: "Физика",
+        university: "Студент ЛФИ МФТИ",
+        achievements: [
+          "Обладатель нескольких дипломов олимпиад 1-2 уровня",
+          "Получил 100 баллов на ЕГЭ по физике"
+        ],
+        quote: "Результаты приходят в то место, которое готово их принять.",
+        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      },
+      {
+        id: randomUUID(),
+        name: "Саша Полетаев",
+        subject: "Физика",
+        university: "Закончил Физтех-лицей имени Капицы",
+        achievements: [
+          "Призер перечневых олимпиад по физике, математике и астрономии",
+          "Обучается в МГУ на физическом факультете"
+        ],
+        quote: "Я умею видеть прошлое.",
+        imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      },
+      {
+        id: randomUUID(),
+        name: "Макс Черноус",
+        subject: "Физика",
+        university: "студент ЛФИ, выпускник Физтех-лицея имени Капицы",
+        achievements: [
+          "в школе был всероссником и членом сборной России по физике",
+          "тренер нынешних и будущих кандидатов в сборную Московской области и России"
+        ],
+        quote: "Люблю соревнования и готовлю к ним других!",
+        imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      },
+      {
+        id: randomUUID(),
+        name: "Миша Солодилов",
+        subject: "Физика",
+        university: "Призер регионального этапа ВсОШ по математике и физике",
+        achievements: [
+          "Призёр перечневых олимпиад",
+          "Написал ЕГЭ по математике на 100 баллов"
+        ],
+        quote: "Понимание — не в заучивании, а в умении задавать себе правильные вопросы.",
+        imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+      }
+    ];
+
+    sampleTeachers.forEach(teacher => {
+      this.teachers.set(teacher.id, teacher);
+    });
+  }
+
+  async getUser(id: string): Promise<User | undefined> {
+    return this.users.get(id);
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    return Array.from(this.users.values()).find(
+      (user) => user.username === username,
+    );
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const id = randomUUID();
+    const user: User = { ...insertUser, id };
+    this.users.set(id, user);
+    return user;
+  }
+
+  async getCourses(): Promise<Course[]> {
+    return Array.from(this.courses.values());
+  }
+
+  async getCourse(id: string): Promise<Course | undefined> {
+    return this.courses.get(id);
+  }
+
+  async getCoursesByCategory(category: string): Promise<Course[]> {
+    return Array.from(this.courses.values()).filter(course => course.category === category);
+  }
+
+  async getCoursesBySubject(subject: string): Promise<Course[]> {
+    return Array.from(this.courses.values()).filter(course => course.subject === subject);
+  }
+
+  async createCourse(insertCourse: InsertCourse): Promise<Course> {
+    const id = randomUUID();
+    const course: Course = { ...insertCourse, id };
+    this.courses.set(id, course);
+    return course;
+  }
+
+  async getTeachers(): Promise<Teacher[]> {
+    return Array.from(this.teachers.values());
+  }
+
+  async getTeacher(id: string): Promise<Teacher | undefined> {
+    return this.teachers.get(id);
+  }
+
+  async createTeacher(insertTeacher: InsertTeacher): Promise<Teacher> {
+    const id = randomUUID();
+    const teacher: Teacher = { ...insertTeacher, id };
+    this.teachers.set(id, teacher);
+    return teacher;
+  }
+
+  async createApplication(insertApplication: InsertApplication): Promise<Application> {
+    const id = randomUUID();
+    const application: Application = { 
+      ...insertApplication, 
+      id, 
+      createdAt: new Date().toISOString() 
+    };
+    this.applications.set(id, application);
+    return application;
+  }
+
+  async getApplications(): Promise<Application[]> {
+    return Array.from(this.applications.values());
+  }
+}
+
+export const storage = new MemStorage();
