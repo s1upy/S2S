@@ -40,7 +40,7 @@ export default function EmotionalHeader() {
           {/* Учёба с элементами игры */}
           <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
             <div className="p-8">
-              <h3 className="text-xl font-semibold font-display mb-4 text-[36px]">
+              <h3 className="font-semibold font-display mb-4 text-[26px]">
                 Учёба с элементами игры
               </h3>
               <p className="font-semibold mb-4">
