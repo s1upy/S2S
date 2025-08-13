@@ -25,13 +25,24 @@ export const courses = pgTable("courses", {
 });
 
 export const teachers = pgTable("teachers", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  name: text("name").notNull(),
-  subject: text("subject").notNull(),
-  university: text("university").notNull(),
-  achievements: text("achievements").array().notNull(),
-  quote: text("quote"),
-  imageUrl: text("image_url"),
+    id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+    name: text("name").notNull(),
+    subject: text("subject").notNull(),
+    quote: text("quote"),
+    imageUrl: text("image_url"),
+});
+
+export type TeacherAchievement = {
+    icon: string;
+    text: string;
+};
+
+// Добавим новую таблицу для достижений преподавателей
+export const teacherAchievements = pgTable("teacher_achievements", {
+    id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+    teacherId: varchar("teacher_id").notNull().references(() => teachers.id),
+    icon: text("icon").notNull(),
+    text: text("text").notNull(),
 });
 
 export const applications = pgTable("applications", {
@@ -66,7 +77,9 @@ export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type Course = typeof courses.$inferSelect;
 export type InsertCourse = z.infer<typeof insertCourseSchema>;
-export type Teacher = typeof teachers.$inferSelect;
+export type Teacher = typeof teachers.$inferSelect & {
+    achievements: TeacherAchievement[];
+};
 export type InsertTeacher = z.infer<typeof insertTeacherSchema>;
 export type Application = typeof applications.$inferSelect;
 export type InsertApplication = z.infer<typeof insertApplicationSchema>;

@@ -7,19 +7,23 @@ import Teachers from "@/components/teachers";
 import Testimonials from "@/components/testimonials";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
+import YourChoise from "@/components/yourchoise.tsx";
 
 export default function Home() {
   return (
-    <div className="min-h-screen px-4 bg-background">
-      <Header />
-      <Hero />
-      <Features />
-      <EmotionalHeader />
-      <CoursesCatalog />
-      <Teachers />
-      <Testimonials />
-      <ContactForm />
-      <Footer />
+    <div className="min-h-screen bg-background">
+        <Header />
+        <div className="px-4">
+            <Hero />
+            <Features />
+            <EmotionalHeader />
+            <YourChoise />
+            <CoursesCatalog />
+            <Teachers />
+            <Testimonials />
+            <ContactForm />
+        </div>
+        <Footer />
     </div>
   );
 }

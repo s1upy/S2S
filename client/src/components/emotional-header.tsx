@@ -5,7 +5,7 @@ import teamImage from "@assets/Frame 501_1755025340599.png";
 
 export default function EmotionalHeader() {
   return (
-    <section className="bg-white mt-36">
+    <section className="mt-36">
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-display">
@@ -14,7 +14,7 @@ export default function EmotionalHeader() {
 
         {/* Первый блок - Наставники */}
         <div className="mb-8">
-          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
             <div className="flex-1 z-10">
               <h2 className="text-2xl font-semibold font-display mb-4 text-[36px]">
                 Наставники, которые недавно были на твоём месте
@@ -38,7 +38,7 @@ export default function EmotionalHeader() {
         {/* Второй ряд - Учёба с элементами игры и Закрытые сообщества */}
         <div className="grid lg:grid-cols-2 gap-8 mb-8">
           {/* Учёба с элементами игры */}
-          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] rounded-[30px] relative overflow-hidden">
             <div className="p-8">
               <h3 className="font-semibold font-display mb-4 text-[26px]">
                 Учёба с элементами игры
@@ -61,7 +61,7 @@ export default function EmotionalHeader() {
           </div>
 
           {/* Закрытые сообщества */}
-          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] max-h-[502px] rounded-[30px] relative overflow-hidden">
+          <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] rounded-[30px] relative overflow-hidden">
             <div className="p-8">
               <h3 className="font-semibold font-display mb-4 text-[26px]">
                 Закрытое комьюнити
@@ -86,22 +86,25 @@ export default function EmotionalHeader() {
         </div>
 
         {/* Третий блок - Навыки для жизни */}
-        <div className="bg-gray-50 rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
+        <div className="bg-transperent border-solid border-2 border-b-4 border-[#B5F43F] rounded-[30px] p-8 flex flex-col lg:flex-row items-center gap-8 relative overflow-hidden">
           <div className="flex-1">
             <img
               src={megaphoneImage}
               alt="Мегафон с задачами"
-              className="w-full h-auto max-w-md mx-auto"
+              className="w-full h-auto scale-[250%] ml-[-50%]"
             />
           </div>
           <div className="flex-1 z-10">
-            <h3 className="text-2xl font-semibold font-display mb-4">
+            <h3 className="text-2xl font-semibold text-[36px] font-display mb-6">
               Навыки, которые пригодятся в жизни
             </h3>
-            <p className="text-gray-600 mb-4">
-              Здесь не только готовят к ЕГЭ, но и дают суперсилы
+            <p className="mb-4 text-[24px] font-semibold">
+                Здесь не только тесты и задачи.
             </p>
-            <ul className="space-y-2 text-gray-600">
+              <p className="mb-4 text-regular">
+                  Ты научишься:
+              </p>
+            <ul className="text-regular">
               <li>• Ты учишься красиво выступать перед людьми</li>
               <li>• Презентовать свои идеи</li>
               <li>• Мотивировать команду и учить с детьми работать</li>

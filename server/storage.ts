@@ -174,54 +174,66 @@ export class MemStorage implements IStorage {
 
     // Initialize teachers
     const sampleTeachers: Teacher[] = [
-      {
-        id: randomUUID(),
-        name: "Лёша Иванов",
-        subject: "Физика",
-        university: "Студент ЛФИ МФТИ",
-        achievements: [
-          "Обладатель нескольких дипломов олимпиад 1-2 уровня",
-          "Получил 100 баллов на ЕГЭ по физике"
-        ],
-        quote: "Результаты приходят в то место, которое готово их принять.",
-        imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-      },
-      {
-        id: randomUUID(),
-        name: "Саша Полетаев",
-        subject: "Физика",
-        university: "Закончил Физтех-лицей имени Капицы",
-        achievements: [
-          "Призер перечневых олимпиад по физике, математике и астрономии",
-          "Обучается в МГУ на физическом факультете"
-        ],
-        quote: "Я умею видеть прошлое.",
-        imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-      },
-      {
-        id: randomUUID(),
-        name: "Макс Черноус",
-        subject: "Физика",
-        university: "студент ЛФИ, выпускник Физтех-лицея имени Капицы",
-        achievements: [
-          "в школе был всероссником и членом сборной России по физике",
-          "тренер нынешних и будущих кандидатов в сборную Московской области и России"
-        ],
-        quote: "Люблю соревнования и готовлю к ним других!",
-        imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-      },
-      {
-        id: randomUUID(),
-        name: "Миша Солодилов",
-        subject: "Физика",
-        university: "Призер регионального этапа ВсОШ по математике и физике",
-        achievements: [
-          "Призёр перечневых олимпиад",
-          "Написал ЕГЭ по математике на 100 баллов"
-        ],
-        quote: "Понимание — не в заучивании, а в умении задавать себе правильные вопросы.",
-        imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
-      }
+        {
+            id: randomUUID(),
+            name: "Лёша Иванов",
+            subject: "Физика",
+            achievements: [
+                { icon: "university", text: "Студент ЛФИ МФТИ" },
+                { icon: "medal", text: "Обладатель нескольких дипломов олимпиад 1-2 уровня" },
+                { icon: "hundred", text: "Получил 100 баллов на ЕГЭ по физике" }
+            ],
+            quote: "Результаты приходят в то место, которое готово их принять.",
+            imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+        },
+        {
+            id: randomUUID(),
+            name: "Саша Полетаев",
+            subject: "Физика",
+            achievements: [
+                { icon: "university", text: "Закончил Физтех-лицей имени Капицы" },
+                { icon: "medal", text: "Призер перечневых олимпиад по физике, математике и астрономии" },
+                { icon: "hundred", text: "Обучается в МГУ на физическом факультете" }
+            ],
+            quote: "Я умею видеть прошлое.",
+            imageUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+        },
+        {
+            id: randomUUID(),
+            name: "Макс Черноус",
+            subject: "Физика",
+            achievements: [
+                { icon: "university", text: "Cтудент ЛФИ, выпускник Физтех-лицея имени Капицы" },
+                { icon: "medal", text: "В школе был всероссником и членом сборной России по физике" },
+                { icon: "hundred", text: "Тренер нынешних и будущих кандидатов в сборную Московской области и России" }
+            ],
+            quote: "Люблю соревнования и готовлю к ним других!",
+            imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+        },
+        {
+            id: randomUUID(),
+            name: "Миша Солодилов",
+            subject: "Физика",
+            achievements: [
+                { icon: "medal", text: "Призер регионального этапа ВсОШ по математике и физике" },
+                { icon: "medal", text: "Призёр перечневых олимпиад" },
+                { icon: "hundred", text: "Написал ЕГЭ по математике на 100 баллов" }
+            ],
+            quote: "Понимание — не в заучивании, а в умении задавать себе правильные вопросы.",
+            imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+        },
+        {
+            id: randomUUID(),
+            name: "Настя Кушлянская",
+            subject: "Математика",
+            achievements: [
+                { icon: "university", text: "Выпускница Физтех-лицея имени Капицы" },
+                { icon: "cup", text: "Многократный призёр и победитель регионального этапа ВсОШ по математике" },
+                { icon: "student", text: "Студентка ВШЭ факультета «Бизнес-информатика»" }
+            ],
+            quote: "Результаты приходят в то место, которое готово их принять.",
+            imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+        }
     ];
 
     sampleTeachers.forEach(teacher => {
