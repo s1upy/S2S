@@ -6,8 +6,8 @@ import teamImage from "@assets/Frame 501_1755025340599.png";
 export default function YourChoise() {
     return (
         <div className="mt-36 flex flex-col items-center">
-            <h1 className="text-3xl font-bold text-[36px] font-display mb-6">Тебе <span className="text-primary">подойдет</span> если</h1>
-            <div className="flex justify-around w-full max-w-7xl mt-6">
+            <h1 className="text-3xl font-bold text-[36px] font-display text-center mb-6">Тебе <span className="text-primary">подойдет</span> если</h1>
+            <div className="flex flex-wrap justify-around max-w-7xl w-full gap-8 mt-6">
                 <div className="flex flex-col items-center text-center">
                     <div className="w-24 h-24 border-solid border-2 border-b-4 border-primary bg-[#EFF6FF] rounded-2xl flex items-center justify-center mb-2">
                         <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">

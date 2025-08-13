@@ -20,6 +20,49 @@ const iconMap: Record<string, string> = {
     university: universityImg
 };
 
+import artemVotyakovImg from "@assets/teachers/Артем Вотяков.png";
+import vanyaTarasenkoImg from "@assets/teachers/Ваня Тарасенко.png";
+import vovaKrechikImg from "@assets/teachers/Вова Крещик.png";
+import lenyaOzogovImg from "@assets/teachers/Лёня Ожегов.png";
+import leshaIvanovImg from "@assets/teachers/Лёша Иванов.png";
+import maxChernousImg from "@assets/teachers/Макс Черноус.png";
+import mishaSolodilovImg from "@assets/teachers/Миша Солодилов.png";
+import nastyaKushlyanskayaImg from "@assets/teachers/Настя Кушлянская.png";
+import olyaKarasevaImg from "@assets/teachers/Оля Карасева.png";
+import sashaZizchenkoImg from "@assets/teachers/Саша Жижченко.png";
+import sashaPoletaevImg from "@assets/teachers/Саша Полетаев.png";
+import sashaTrophimenkoImg from "@assets/teachers/Саша Трофименко.png";
+import svyatoslavMorgunovImg from "@assets/teachers/Святослав Моргунов.png";
+import serezhaBogdanovImg from "@assets/teachers/Сережа Богданов.png";
+import serezhaKushlyanskyImg from "@assets/teachers/Сережа Кушлянский.png";
+import fedyaDoroninImg from "@assets/teachers/Федя Доронин.png";
+import uraGrishinImg from "@assets/teachers/Юра Гришин.png";
+
+import {Accordion, AccordionItem} from "@/components/ui/accordion.tsx";
+
+import bg0 from "@assets/bg_0.png";
+import {Button} from "@/components/ui/button.tsx";
+
+const teachersAvatarsMap: Record<string, string> = {
+    "Артем Вотяков": artemVotyakovImg,
+    "Ваня Тарасенко": vanyaTarasenkoImg,
+    "Вова Крещик": vovaKrechikImg,
+    "Лёня Ожегов": lenyaOzogovImg,
+    "Лёша Иванов": leshaIvanovImg,
+    "Макс Черноус": maxChernousImg,
+    "Миша Солодилов": mishaSolodilovImg,
+    "Настя Кушлянская": nastyaKushlyanskayaImg,
+    "Оля Карасева": olyaKarasevaImg,
+    "Саша Жижченко": sashaZizchenkoImg,
+    "Саша Полетаев": sashaPoletaevImg,
+    "Саша Трофименко": sashaTrophimenkoImg,
+    "Святослав Моргунов": svyatoslavMorgunovImg,
+    "Сережа Богданов": serezhaBogdanovImg,
+    "Сережа Кушлянский": serezhaKushlyanskyImg,
+    "Федя Доронин": fedyaDoroninImg,
+    "Юра Гришин": uraGrishinImg
+};
+
 // Стили для слайдера
 const settings = {
     dots: true,
@@ -51,6 +94,41 @@ const settings = {
         },
     ],
 };
+
+const accordionData: AccordionItem[] = [
+    {
+        id: '1',
+        title: 'Как проходит подготовка к ЕГЭ?',
+        content: 'Наши консультанты помогут составить индивидуальный план подготовки на основе ваших целей и текущего уровня знаний. Мы используем проверенные методики и современные образовательные технологии для максимально эффективного обучения.',
+        icon: <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.6 29C2.61 29 1.7625 28.6451 1.0575 27.9352C0.3525 27.2253 0 26.3719 0 25.375V3.625C0 2.62812 0.3525 1.77474 1.0575 1.06484C1.7625 0.354948 2.61 0 3.6 0H32.4C33.39 0 34.2375 0.354948 34.9425 1.06484C35.6475 1.77474 36 2.62812 36 3.625V25.375C36 26.3719 35.6475 27.2253 34.9425 27.9352C34.2375 28.6451 33.39 29 32.4 29H3.6ZM3.6 25.375H16.2V3.625H3.6V25.375ZM19.8 25.375H32.4V3.625H19.8V25.375ZM5.4 21.75H14.4V18.125H5.4V21.75ZM5.4 16.3125H14.4V12.6875H5.4V16.3125ZM5.4 10.875H14.4V7.25H5.4V10.875ZM21.6 21.75H30.6V18.125H21.6V21.75ZM21.6 16.3125H30.6V12.6875H21.6V16.3125ZM21.6 10.875H30.6V7.25H21.6V10.875Z" fill="#0080FF" fill-opacity="0.65"/>
+        </svg>
+    },
+    {
+        id: '2',
+        title: 'Какие предметы можно изучать?',
+        content: 'Мы предлагаем подготовку по всем основным предметам ЕГЭ: математика, русский язык, физика, химия, биология, история, обществознание, английский язык, литература, география и информатика.',
+        icon: <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.6 29C2.61 29 1.7625 28.6451 1.0575 27.9352C0.3525 27.2253 0 26.3719 0 25.375V3.625C0 2.62812 0.3525 1.77474 1.0575 1.06484C1.7625 0.354948 2.61 0 3.6 0H32.4C33.39 0 34.2375 0.354948 34.9425 1.06484C35.6475 1.77474 36 2.62812 36 3.625V25.375C36 26.3719 35.6475 27.2253 34.9425 27.9352C34.2375 28.6451 33.39 29 32.4 29H3.6ZM3.6 25.375H16.2V3.625H3.6V25.375ZM19.8 25.375H32.4V3.625H19.8V25.375ZM5.4 21.75H14.4V18.125H5.4V21.75ZM5.4 16.3125H14.4V12.6875H5.4V16.3125ZM5.4 10.875H14.4V7.25H5.4V10.875ZM21.6 21.75H30.6V18.125H21.6V21.75ZM21.6 16.3125H30.6V12.6875H21.6V16.3125ZM21.6 10.875H30.6V7.25H21.6V10.875Z" fill="#0080FF" fill-opacity="0.65"/>
+        </svg>
+    },
+    {
+        id: '3',
+        title: 'Сколько длится курс подготовки?',
+        content: 'Длительность курса зависит от ваших целей и текущего уровня подготовки. Стандартный курс длится 8-9 месяцев, но мы также предлагаем интенсивные программы и долгосрочную подготовку.',
+        icon: <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.6 29C2.61 29 1.7625 28.6451 1.0575 27.9352C0.3525 27.2253 0 26.3719 0 25.375V3.625C0 2.62812 0.3525 1.77474 1.0575 1.06484C1.7625 0.354948 2.61 0 3.6 0H32.4C33.39 0 34.2375 0.354948 34.9425 1.06484C35.6475 1.77474 36 2.62812 36 3.625V25.375C36 26.3719 35.6475 27.2253 34.9425 27.9352C34.2375 28.6451 33.39 29 32.4 29H3.6ZM3.6 25.375H16.2V3.625H3.6V25.375ZM19.8 25.375H32.4V3.625H19.8V25.375ZM5.4 21.75H14.4V18.125H5.4V21.75ZM5.4 16.3125H14.4V12.6875H5.4V16.3125ZM5.4 10.875H14.4V7.25H5.4V10.875ZM21.6 21.75H30.6V18.125H21.6V21.75ZM21.6 16.3125H30.6V12.6875H21.6V16.3125ZM21.6 10.875H30.6V7.25H21.6V10.875Z" fill="#0080FF" fill-opacity="0.65"/>
+        </svg>
+    },
+    {
+        id: '4',
+        title: 'Какой формат обучения доступен?',
+        content: 'Мы предлагаем различные форматы: индивидуальные занятия, групповые курсы, онлайн-обучение и комбинированные программы. Вы можете выбрать наиболее подходящий для вас вариант.',
+        icon: <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.6 29C2.61 29 1.7625 28.6451 1.0575 27.9352C0.3525 27.2253 0 26.3719 0 25.375V3.625C0 2.62812 0.3525 1.77474 1.0575 1.06484C1.7625 0.354948 2.61 0 3.6 0H32.4C33.39 0 34.2375 0.354948 34.9425 1.06484C35.6475 1.77474 36 2.62812 36 3.625V25.375C36 26.3719 35.6475 27.2253 34.9425 27.9352C34.2375 28.6451 33.39 29 32.4 29H3.6ZM3.6 25.375H16.2V3.625H3.6V25.375ZM19.8 25.375H32.4V3.625H19.8V25.375ZM5.4 21.75H14.4V18.125H5.4V21.75ZM5.4 16.3125H14.4V12.6875H5.4V16.3125ZM5.4 10.875H14.4V7.25H5.4V10.875ZM21.6 21.75H30.6V18.125H21.6V21.75ZM21.6 16.3125H30.6V12.6875H21.6V16.3125ZM21.6 10.875H30.6V7.25H21.6V10.875Z" fill="#0080FF" fill-opacity="0.65"/>
+        </svg>
+    }
+];
 
 export default function Teachers() {
   const { data: teachers = [], isLoading } = useQuery<Teacher[]>({
@@ -94,7 +172,7 @@ export default function Teachers() {
           margin: 0px 0px -25px;
         }
         .teachers-slider .slick-dots li {
-          margin: 0 10px;
+          margin: 0 4px;
         }
         .teachers-slider .slick-dots li button:before {
           color: #ccc;
@@ -120,7 +198,7 @@ export default function Teachers() {
               <div key={teacher.id} className="px-2">
                 <Card className="border-primary border-solid border-2 border-b-4 rounded-[40px] p-6 text-left h-full">
                   <img
-                    src={teacher.imageUrl || "null"}
+                    src={teachersAvatarsMap[teacher.name]}
                     alt={teacher.name}
                     className="w-[124px] h-[124px] rounded-2xl mx-auto mb-4"
                   />
@@ -148,73 +226,41 @@ export default function Teachers() {
             ))}
           </Slider>
 
-          {/* Reviews Section */}
-          <div className="text-center mt-[140px] mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
-              Отзывы родителей и учеников
-            </h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <Card key={index} className="shadow-card">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <h4 className="font-semibold text-gray-900">Антонина, Мама</h4>
-                      <p className="text-sm text-gray-600 mt-2">
-                        Сын поступил в МГУ хотя только год назад не умел складывать дроби!
-                      </p>
-                    </div>
-                    <div className="text-xs text-gray-500 bg-gray-50 rounded p-2">
-                      Подготовка к ЕГЭ по физике
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
           {/* FAQ Section */}
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <div className="text-center mt-36">
+            <h3 className="text-[36px] font-display font-semibold mb-8">
               Часто задаваемые вопросы
             </h3>
             
-            <div className="max-w-3xl mx-auto space-y-4">
-              {[
-                "Как проходит подготовка к ЕГЭ?",
-                "Какие гарантии результата вы даете?",
-                "Можно ли заниматься в группе?",
-                "Какая стоимость занятий?",
-                "Как записаться на пробный урок?"
-              ].map((question, index) => (
-                <Card key={index} className="text-left">
-                  <CardContent className="p-4">
-                    <button className="flex justify-between items-center w-full text-left">
-                      <span className="font-medium text-gray-900">{question}</span>
-                      <span className="text-gray-400">+</span>
-                    </button>
-                    {index === 0 && (
-                      <div className="mt-3 pt-3 border-t border-gray-100">
-                        <p className="text-sm text-gray-600">
-                          Наши консультанты помогут составить индивидуальный план подготовки на основе ваших целей и текущего уровня знаний
-                        </p>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-4xl mx-auto w-full space-y-4">
+                <Accordion items={accordionData} allowMultiple={false} />
             </div>
 
-            <div className="mt-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                Не нашли ответы на свой вопрос?
-              </h4>
-              <p className="text-gray-600 mb-4">
-                Наши консультанты готовы помочь вам с любыми вопросами о подготовке к ЕГЭ
-              </p>
-              <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                Задать вопрос
-              </button>
+            <div className="mt-8 max-w-4xl w-full mx-auto">
+                <Card className="relative overflow-hidden rounded-[40px] mt-10 w-full max-w-7xl">
+                    {/* Фоновое изображение */}
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${bg0})` }}
+                    />
+                    <CardContent className="relative z-10 text-center p-8">
+                        <h2 className="text-3xl md:text-4xl font-display font-normal mb-4">
+                            На нашли ответ на свой вопрос?
+                        </h2>
+                        <p className="text-normal mb-8 max-w-2xl mx-auto">
+                            Наши консультанты готовы помочь вам с любыми вопросами о подготовке к ЕГЭ
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                                className="bg-primary text-white hover:bg-blue-600"
+                                size="lg"
+                            >
+                                Задать вопрос
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
             </div>
           </div>
         </div>

@@ -27,25 +27,25 @@ export default function Features() {
         {/* Карточки */}
         <div className="grid grid-cols-12 gap-4 mb-6">
           {/* Первая карточка - широкая */}
-          <div className="col-span-12 bg-[#FCFCFF] md:col-span-8 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 min-h-[150px] flex items-start">
+          <div className="col-span-12 bg-[#FCFCFF] md:col-span-8 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 lg:min-h-[150px] flex items-start">
             Прокачиваем soft skills: как выступать, как мыслить, как общаться
           </div>
           {/* Вторая карточка - узкая */}
-          <div className="col-span-12 md:col-span-4 border-solid bg-[#FCFCFF] border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 min-h-[150px] flex items-end">
+          <div className="col-span-12 md:col-span-4 border-solid bg-[#FCFCFF] border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 lg:min-h-[150px] flex items-end">
             Готовим к ЕГЭ на 80+ баллов
           </div>
           {/* Третья карточка - узкая */}
-          <div className="bg-[#FCFCFF] col-span-12 md:col-span-4 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 min-h-[150px] flex items-end">
+          <div className="bg-[#FCFCFF] col-span-12 md:col-span-4 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 lg:min-h-[150px] flex items-end">
             Помогаем выигрывать олимпиады
           </div>
           {/* Четвертая карточка - широкая */}
-          <div className="bg-[#FCFCFF] col-span-12 md:col-span-8 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 min-h-[150px] flex items-start">
+          <div className="bg-[#FCFCFF] col-span-12 md:col-span-8 border-solid border border-b-4 border-[#0080FF] text-[20px] font-semibold rounded-[30px] p-6 lg:min-h-[150px] flex items-start">
             Помогаем понять не только «что сдавать», но и зачем
           </div>
         </div>
 
         {/* Нижний блок */}
-        <div className="bg-[#0080FF] min-h-[150px] flex text-start text-white p-6 flex items-end justify-between rounded-[30px] relative overflow-hidden">
+        <div className="bg-[#0080FF] min-h-[400px] lg:min-h-[150px] flex text-start text-white p-6 items-start lg:items-end justify-between rounded-[30px] relative overflow-hidden">
           <div className="relative z-10">
             <p className="font-medium text-lg">
               Настраиваем на поступление в топ:
@@ -53,11 +53,11 @@ export default function Features() {
               МГУ, ВШЭ, МФТИ, СПбГУ — ты выбираешь
             </p>
           </div>
-          <div className="absolute right-0 top-0 h-full">
+          <div className="absolute right-0 lg:top-0 bottom-0 h-full">
             <img
               src={universityLogos}
               alt="Логотипы университетов"
-              className="h-full w-auto object-cover object-right"
+              className="h-1/2 lg:h-full w-auto object-cover object-bottom lg:object-right"
             />
           </div>
         </div>

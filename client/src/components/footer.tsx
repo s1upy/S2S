@@ -1,14 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-[#2A2A2C] mt-20 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Logo and main info */}
-          <div className="flex items-center justify-center space-x-2 mb-8">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S2S</span>
-            </div>
-            <span className="text-xl font-bold">S2S</span>
+          <div className="flex items-left text-left justify-start space-x-2 mb-8">
+            <h4 className="text-xl font-semibold">S<sub>2</sub>S</h4>
           </div>
           
           {/* Footer columns */}
@@ -16,7 +13,7 @@ export default function Footer() {
             {/* Subjects column */}
             <div>
               <h4 className="font-semibold mb-4">Предметы</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm">
                 <li>Математика</li>
                 <li>Физика</li>
                 <li>Химия</li>
@@ -29,7 +26,7 @@ export default function Footer() {
             {/* About column */}
             <div>
               <h4 className="font-semibold mb-4">О нас</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm">
                 <li>О нас</li>
                 <li>Отзывы</li>
                 <li>Преподавателям</li>
@@ -42,7 +39,7 @@ export default function Footer() {
             {/* Additional column 1 */}
             <div>
               <h4 className="font-semibold mb-4">Ещё столбик</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm">
                 <li>О нас</li>
                 <li>Отзывы</li>
                 <li>Студентам</li>
@@ -54,7 +51,7 @@ export default function Footer() {
             {/* Additional column 2 */}
             <div>
               <h4 className="font-semibold mb-4">Ещё столбик</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm">
                 <li>Отзывы</li>
                 <li>Преподавателям</li>
                 <li>Студентам</li>
@@ -66,7 +63,7 @@ export default function Footer() {
             {/* Additional column 3 */}
             <div>
               <h4 className="font-semibold mb-4">Ещё столбик</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm">
                 <li>Отзывы</li>
                 <li>Студентам</li>
                 <li>Преподавателям</li>

@@ -8,7 +8,7 @@ export default function EmotionalHeader() {
     <section className="mt-36">
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-display">
+        <h2 className="text-3xl text-left md:text-5xl font-bold lg:text-center mb-16 font-display">
           Эмоциональный заголовок
         </h2>
 
@@ -91,7 +91,7 @@ export default function EmotionalHeader() {
             <img
               src={megaphoneImage}
               alt="Мегафон с задачами"
-              className="w-full h-auto scale-[250%] ml-[-50%]"
+              className="w-full h-auto scale-[250%] ml-[-50%] hidden lg:block"
             />
           </div>
           <div className="flex-1 z-10">
@@ -111,6 +111,13 @@ export default function EmotionalHeader() {
               <li>• А значит, быть лидером во всех сферах жизни</li>
             </ul>
           </div>
+            <div className="flex-1 lg:hidden">
+                <img
+                    src={megaphoneImage}
+                    alt="Мегафон с задачами"
+                    className="w-full h-auto scale-[250%] ml-[-50%]"
+                />
+            </div>
         </div>
       </div>
     </section>

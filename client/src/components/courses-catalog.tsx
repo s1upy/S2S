@@ -25,9 +25,9 @@ const categories = [
 ];
 
 const subjects = [
-    { name: "Астрономия", key: "astr" },
-    { name: "Информатика", key: "pc" },
-    { name: "Математика", key: "math" },
+    { name: "Астроно..", key: "astr" },
+    { name: "Информ..", key: "pc" },
+    { name: "Математ..", key: "math" },
     { name: "Физика", key: "react" }
 ];
 
@@ -121,7 +121,7 @@ export default function CoursesCatalog() {
               </div>
 
               {/* Filter Tabs */}
-              <div className="flex flex-wrap gap-3 mb-8 justify-center">
+              <div className="flex flex-wrap gap-3 mb-8 justify-start sm:justify-center">
                 {categories.map((category) => (
                   <button
                     key={category.key}
@@ -152,7 +152,7 @@ export default function CoursesCatalog() {
                             <div
                                 key={subject.key}
                                 onClick={() => handleSubjectToggle(subject.name)}
-                                className={`relative flex flex-col min-w-[130px] items-center text-center p-4 rounded-xl hover:scale-[105%] transition-all duration-200 cursor-pointer ${
+                                className={`relative flex flex-col w-[68px] items-center text-center rounded-xl hover:scale-[105%] transition-all duration-200 cursor-pointer ${
                                     isSelected ? 'transform scale-105' : ''
                                 }`}
                             >
@@ -163,7 +163,7 @@ export default function CoursesCatalog() {
                                             e.stopPropagation();
                                             handleSubjectToggle(subject.name);
                                         }}
-                                        className="absolute top-2 right-6 w-6 h-6 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold z-10 shadow-md transition-colors"
+                                        className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold z-10 shadow-md transition-colors"
                                         aria-label="Отменить выбор"
                                     >
                                         −
@@ -222,16 +222,13 @@ export default function CoursesCatalog() {
                                   <h3 className="font-display text-[24px] leading-tight font-[400]">
                                       {course.title}
                                   </h3>
-                                  {course.isPopular && (
-                                      <Badge className="bg-primary text-white">Популярный</Badge>
-                                  )}
                               </div>
 
                               <p className="text-[18px] font-regular mb-4">
                                   {course.description}
                               </p>
 
-                              <div className="flex items-center gap-4 text-sm bg-[#F9F9F9] rounded-lg p-1 px-2 text-[#575757] mb-4">
+                              <div className="flex flex-wrap items-center gap-4 text-sm bg-[#F9F9F9] rounded-lg p-1 px-2 text-[#575757] mb-4">
                                   <div className="flex items-center gap-1">
                                       <Clock className="h-4 w-4" />
                                       <span>{course.duration}</span>
@@ -257,7 +254,7 @@ export default function CoursesCatalog() {
                                   </ul>
                               </div>
 
-                              <div className="flex flex-gap items-center justify-between mb-4 gap-4">
+                              <div className="flex flex-col sm:flex-gap items-center justify-between mb-4 gap-4">
                                   <div className="bg-[#F9F9F9] rounded-lg p-2 flex flex-col items-center w-full">
                                       <span className="text-[#878787] text-sm mb-2">помесячно</span>
                                       <h2 className="text-xl font-display font-normal">от {course.currentPrice.toLocaleString()} Р</h2>

@@ -20,8 +20,6 @@ export default function Home() {
             <YourChoise />
             <CoursesCatalog />
             <Teachers />
-            <Testimonials />
-            <ContactForm />
         </div>
         <Footer />
     </div>
