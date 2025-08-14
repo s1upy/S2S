@@ -19,29 +19,26 @@ export default function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S2S</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">S2S</span>
+            <span className="text-xl font-bold">S2S</span>
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center font-medium space-x-8">
             <button 
               onClick={() => scrollToSection('courses')}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
+              className="hover:text-primary transition-colors duration-300"
             >
               Курсы
             </button>
             <button 
               onClick={() => scrollToSection('teachers')}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
+              className="hover:text-primary transition-colors duration-300"
             >
               Преподавателям
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-primary transition-colors duration-300"
+              className="hover:text-primary transition-colors duration-300"
             >
               О нас
             </button>
@@ -60,7 +57,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="md:hidden mt-4 pb-4 border-t font-medium border-gray-200">
             <div className="flex flex-col space-y-4 pt-4">
               <button 
                 onClick={() => scrollToSection('courses')}

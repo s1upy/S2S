@@ -169,7 +169,7 @@ export default function Teachers() {
 
         /* Изменения для точек слайдера */
         .teachers-slider .slick-dots {
-          margin: 0px 0px -25px;
+          margin: 0px 0px -5px;
         }
         .teachers-slider .slick-dots li {
           margin: 0 4px;

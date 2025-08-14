@@ -254,7 +254,7 @@ export default function CoursesCatalog() {
                                   </ul>
                               </div>
 
-                              <div className="flex flex-col sm:flex-gap items-center justify-between mb-4 gap-4">
+                              <div className="flex flex-col md:flex-row items-center justify-between mb-4 gap-4">
                                   <div className="bg-[#F9F9F9] rounded-lg p-2 flex flex-col items-center w-full">
                                       <span className="text-[#878787] text-sm mb-2">помесячно</span>
                                       <h2 className="text-xl font-display font-normal">от {course.currentPrice.toLocaleString()} Р</h2>

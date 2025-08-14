@@ -1,6 +1,42 @@
+import {Input} from "@/components/ui/input.tsx";
+import {Button} from "@/components/ui/button.tsx";
+
 export default function Footer() {
   return (
     <footer className="bg-[#2A2A2C] mt-20 text-white py-12">
+        <div className="flex rounded-[40px] mb-10 flex-col w-full text-[#1E1E24] md:flex-row items-center md:items-start justify-between bg-white p-8 shadow-md max-w-7xl mx-auto">
+            {/* Left Side */}
+            <div className="md:w-1/2 mb-6 md:mb-0">
+                <h2 className="font-display text-3xl font-semibold mb-2">Готов двигаться?</h2>
+                <p className="font-semibold text-lg">
+                    Оставляй заявку, и мы подберём<br /> маршрут под твои цели.
+                </p>
+            </div>
+
+            {/* Right Side - Form */}
+            <form className="md:w-1/2 w-full space-y-4">
+                <Input
+                    type="text"
+                    placeholder="Иван Иванов"
+                    className="w-full"
+                />
+                <Input
+                    type="tel"
+                    placeholder="+7 900 800 70 60"
+                    className="w-full"
+                />
+                <Input
+                    type="email"
+                    placeholder="example@email.ru"
+                    className="w-full"
+                />
+                <Button
+                    className="w-1/2"
+                >
+                    Оставить заявку
+                </Button>
+            </form>
+        </div>
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Logo and main info */}
